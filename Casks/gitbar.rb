@@ -12,6 +12,13 @@ cask "gitbar" do
 
   app "GitBar.app"
 
+  # GitBar is ad-hoc signed but not notarized. Strip the quarantine flag that
+  # Homebrew applies so users don't hit the "app is damaged" Gatekeeper block.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/GitBar.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/GitBar",
     "~/Library/Caches/com.rushipatel.gitbar",
