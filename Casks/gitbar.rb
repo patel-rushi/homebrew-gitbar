@@ -1,6 +1,6 @@
 cask "gitbar" do
   version "1.1.8"
-  sha256 "29421de54fb6302fcbc1198f898e05aa1d6715977213bca8bc087fb0bcfb4635"
+  sha256 "64a99dfb10624d835ae91e817ac99e469ced42e24cbd13c06b283050ab4cb0ec"
 
   url "https://github.com/patel-rushi/Gitbar/releases/download/v#{version}/GitBar-#{version}-arm64.dmg"
   name "GitBar"
